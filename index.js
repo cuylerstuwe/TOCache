@@ -4,7 +4,6 @@ var https = require("https");
 var fs = require("fs");
 var cors = require("cors");
 var axios = require("axios");
-var dns = require("dns");
 
 var app = express();
 
@@ -26,7 +25,6 @@ const options = {
 };
 
 app.get("/save", async(req, res) => {
-
 	fs.writeFileSync("savestate.json", JSON.stringify(global.cache));
 	res.send("Finished save routine");
 });
