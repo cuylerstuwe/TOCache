@@ -113,7 +113,6 @@ app.get("/", async (req, res) => {
 			for(const responseKey of responseKeys) {
 				global.cache[responseKey] = {...requesterInfo[responseKey]};
 			}
-			// global.cache = {...global.requesterInfo, ...global.cache};
 
 		}
 		else {
